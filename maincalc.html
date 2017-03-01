@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+var previousNumber;
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		$("#d").attr("value", function(i,origValue){
+			if(origValue.length == 8){
+				alert("Maximum number length reached.");
+			}
+			else{
+				 previousNumber = origValue;
+			     return origValue + 1;
+			}
+		});
+		return previousNumber;
+	});
+	
+	$("#btn2").click(function(){
+		$("#d").attr("value", function(i,origValue){
+			if(origValue.length == 8){
+				alert("Maximum number length reached.");
+			}
+			else{
+		    previousNumber = origValue;
+			return origValue + 2;
+			}
+		});
+		return previousNumber;
+	});
+
+	$("#btn3").click(function(){
+		$("#d").attr("value", function(i,origValue){
+			if(origValue.length == 8){
+				alert("Maximum number length reached.");
+			}
+			else{
+			previousNumber = origValue;	
+			return origValue + 3;
+			}
+		});
+		return previousNumber;
+	});
+
+	$("#btn4").click(function(){
+		$("#d").attr("value", function(i,origValue){
+			if(origValue.length == 8){
+				alert("Maximum number length reached.");
+			}
+			else{
+			previousNumber = origValue;
+			return origValue + 4;
+			}
+		});
+		return previousValue;
+	});
+
+	$("#btn5").click(function(){
+		$("#d").attr("value", function(i,origValue){
+			if(origValue.length == 8){
+				alert("Maximum number length reached.");
+			}
+			else{
+			previousNumber = origValue;
+			return origValue + 5;
+			}
+		});
+		return previousNumber;
+	});
+
+	$("#btn6").click(function(){
+		$("#d").attr("value", function(i,origValue){
+			if(origValue.length==8){
+				alert("Maximum number length reached.");
+			}
+			else{
+			previousNumber = origValue;	
+			return origValue + 6;
+			}
+		});
+		return previousNumber;
+	});
+
+	$("#btn7").click(function(){
+		$("#d").attr("value", function(i,origValue){
+			if(origValue.length == 8){
+				alert("Maximum number length reached.");
+			}
+			else{
+			previousNumber = origValue;
+			return origValue + 7;
+			}
+		})
+		return previousNumber;
+	});
+
+	$("#btn8").click(function(){
+		$("#d").attr("value", function(i,origValue){
+			if(origValue.length == 8){
+				alert("Maximum number length reached.");
+			}
+			else{
+			previousNumber = origValue;
+			return origValue + 8;
+			}
+		});
+		return previousNumber;
+	});
+
+	$("#btn9").click(function(){
+		$("#d").attr("value", function(i,origValue){
+			if(origValue.length == 8){
+				alert("Maximum number length reached.");
+			}
+			else{
+			previousNumber = origValue;
+			return origValue + 9;
+			}
+		});
+		return previousNumber;
+	});
+
+	$("#btn0").click(function(){
+		$("#d").attr("value", function(i,origValue){
+			if(origValue.length == 8){
+				alert("Maximum number length reached.");
+			}
+			else{
+			previousNumber = origValue;
+			return origValue + 0;
+			}
+		});
+		return previousNumber;
+	});
+});
+</script>
+<script>
+var firstNumber;
+var calcFunc;
+$(document).ready(function(){
+	$("#plus").click(function(){
+		$("#d").attr("value", function(i,origValue){
+			firstNumber = origValue;
+			calcFunc = "+";
+			return "";
+		});
+		return firstNumber;
+		return calcFunc;
+		});
+	$("#subtract").click(function(){
+		$("#d").attr("value", function(i,origValue){
+			firstNumber = origValue;
+			calcFunc = "-";
+			return "";
+		});
+		return firstNumber;
+		return calcFunc;
+	});
+	$("#divide").click(function(){
+		$("#d").attr("value", function(i,origValue){
+			firstNumber=origValue;
+			calcFunc = "/";
+			return "";
+		});
+		return firstNumber;
+		return calcFunc;
+	});
+	$("#multiply").click(function(){
+		$("#d").attr("value", function(i,origValue){
+			firstNumber=origValue;
+			calcFunc = "*";
+			return "";
+		});
+		return firstNumber;
+		return calcFunc;
+	});
+
+});
+</script>
+<script>
+$(document).ready(function(){
+	$("#btnc").click(function(){
+		$("#d").attr("value", "");
+	});
+});
+</script>
+<script>
+$(document).ready(function(){
+	$("#btnce").click(function(){
+		$("#d").attr("value", previousValue.val(){
+			
+		});
+	});
+});
+</script>
+<script>
+$(document).ready(function(){
+	$("#buttonE").click(function(){
+		$("#d").attr("value", function(i,origValue){
+			var secondNumber = origValue;
+			if(calcFunc == "+"){
+				var result = (parseFloat(firstNumber) + parseFloat(secondNumber));
+				return result;
+				}
+			if(calcFunc == "-"){
+				var result = firstNumber - secondNumber;
+				return result;
+				firstNumber = result; 
+			}
+			if(calcFunc == "*"){
+				if(!secondNumber){
+					var result = firstNumber * firstNumber;
+					return result;
+				}
+				else{
+				var result = firstNumber * secondNumber; 
+				return result;
+				}
+			}
+			if(calcFunc == "/"){
+				if(secondNumber == 0){
+					alert("Invalid result, please enter a number that is not 0.");
+				}
+				else{
+				var result = firstNumber / secondNumber;
+				return result;
+			}
+			}
+		});
+		return firstNumber;
+		});
+});
+</script>
+
+<title>Calculator</title>
+</head>
+<body>
+<div class="calculatorbg">
+<div class="display"><input type="text" readonly id="d" value=""></div>
+<div class="theButtons">
+<input id="btnc" type="button" class="button clear" value="C">
+<input id="btnce" type="button" class="button clear" value="CE">
+<p><input id="btn7" type="button" class="button number" value="7">
+<input id="btn8" type="button" class="button number" value="8">
+<input id="btn9" type="button" class="button number" value="9">
+<input id="plus" type="button" class="button function" value="+"></p>
+<p><input id="btn4" type="button" class="button number" value="4"">
+<input id="btn5" type="button" class="button number" value="5">
+<input id="btn6" type="button" class="button number" value="6">
+<input id="subtract" type="button" class="button function" value="-">
+</p>
+<p><input id="btn1" type="button" class="button number" value="1">
+<input id="btn2" type="button" class="button number" value="2"">
+<input id="btn3" type="button" class="button number" value="3">
+<input id="multiply" type="button" class="button function" value="*"></p>
+<p>
+<input id="btn0" type="button" class="button number" value="0">
+<input id="decimal" type="button" class="button number" value=".">
+<input id="buttonE" type="button" class="button function" value="=">
+<input id="divide" type="button" class="button function" value="/">
+</p>
+</div>
+</div>
+</body>
+</html>
